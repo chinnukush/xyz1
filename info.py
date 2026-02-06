@@ -14,21 +14,21 @@ def str_to_bool(val, default=False):
 # =========================================================
 API_ID = int(environ.get("API_ID", "15671595"))
 API_HASH = environ.get("API_HASH", "bb8f36f9c39a24c7f8b2acbc7ea8c60a")
-BOT_TOKEN = environ.get("BOT_TOKEN", "")
+BOT_TOKEN = environ.get("BOT_TOKEN", "8542548465:AAGDJzASZI1PU_kb8oF5GUpwaO5r9Ot8j5c")
 PORT = int(environ.get("PORT", "8080"))
 TIMEZONE = environ.get("TIMEZONE", "Asia/Kolkata")
-OWNER_USERNAME = environ.get("OWNER_USERNAME", "BOT_OWNER26")
+OWNER_USERNAME = environ.get("OWNER_USERNAME", "helperxsupport")
 
 # =========================================================
 # 💾 DATABASE CONFIGURATION
 # =========================================================
-DB_URL = environ.get("DATABASE_URI", "")
+DB_URL = environ.get("DATABASE_URI", "mongodb+srv://anikush8310_db_user:89zE00vwQMcxo0Xd@cluster0.td3ydlm.mongodb.net/?appName=Cluster0")
 DB_NAME = environ.get("DATABASE_NAME", "testing")
 
 # =========================================================
 # 📢 CHANNELS & ADMINS
 # =========================================================
-ADMINS = int(environ.get("ADMINS", "0"))
+ADMINS = int(environ.get("ADMINS", "7253187871"))
 
 LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "0"))
 PREMIUM_LOGS = int(environ.get("PREMIUM_LOGS", "0"))
