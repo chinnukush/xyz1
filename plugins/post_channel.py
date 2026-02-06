@@ -55,7 +55,7 @@ async def index_normal_videos(client, m: Message):
             shortlink = link
 
         caption = (
-            f"<i>ʜᴇʀᴇ ɪꜱ ʏᴏᴜʀ ʟɪɴᴋ ʙᴀʙᴇ 😘./n/n</i>"
+            f"<i>ʜᴇʀᴇ ɪꜱ ʏᴏᴜʀ ʟɪɴᴋ ʙᴀʙᴇ 😘.\n\n</i>"
             f"{shortlink}"
         )
 
