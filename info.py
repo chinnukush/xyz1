@@ -80,7 +80,7 @@ QR_CODE_IMAGE = environ.get("QR_CODE_IMAGE", "https://i.ibb.co/21ZPjBNw/071d4419
 START_PIC = environ.get("START_PIC", "https://i.ibb.co/v6j5cmNx/571f351e38dc.jpg")
 AUTH_PICS = environ.get("AUTH_PICS", "https://i.ibb.co/RkFKXdzZ/ab3f2ad85d1b.jpg")
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://image.zaw-myo.workers.dev/image/e3031533-e96c-4e57-b248-a8f3726d4211")
-NO_IMG = environ.get("NO_IMG", "")
+NO_IMG = environ.get("NO_IMG", "https://i.ibb.co/hJqTHQqh/7f94d28e82e3.jpg")
 
 # =========================================================
 # 🌐 WEB APP
