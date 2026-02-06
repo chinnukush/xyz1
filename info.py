@@ -30,16 +30,16 @@ DB_NAME = environ.get("DATABASE_NAME", "testing")
 # =========================================================
 ADMINS = int(environ.get("ADMINS", "7253187871"))
 
-LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "0"))
-PREMIUM_LOGS = int(environ.get("PREMIUM_LOGS", "0"))
-VERIFIED_LOG = int(environ.get("VERIFIED_LOG", "0"))
+LOG_CHANNEL = int(environ.get("LOG_CHANNEL", "-1002220189899"))
+PREMIUM_LOGS = int(environ.get("PREMIUM_LOGS", "-1002220189899"))
+VERIFIED_LOG = int(environ.get("VERIFIED_LOG", "-1002220189899"))
 
-POST_CHANNEL = int(environ.get("POST_CHANNEL", "0"))
-VIDEO_CHANNEL = int(environ.get("VIDEO_CHANNEL", "0"))
-BRAZZER_CHANNEL = int(environ.get("BRAZZER_CHANNEL", "0"))
+POST_CHANNEL = int(environ.get("POST_CHANNEL", "-1002275153880"))
+VIDEO_CHANNEL = int(environ.get("VIDEO_CHANNEL", "-1002723763926"))
+BRAZZER_CHANNEL = int(environ.get("BRAZZER_CHANNEL", "-1002275153880"))
 
 # Auth channels list
-auth_channel_str = environ.get("AUTH_CHANNEL", "")
+auth_channel_str = environ.get("AUTH_CHANNEL", "-1002275153880")
 AUTH_CHANNEL = [int(x) for x in auth_channel_str.split() if x.strip().lstrip("-").isdigit()]
 
 # =========================================================
@@ -47,32 +47,32 @@ AUTH_CHANNEL = [int(x) for x in auth_channel_str.split() if x.strip().lstrip("-"
 # =========================================================
 FSUB = str_to_bool(environ.get("FSUB"), True)
 IS_VERIFY = str_to_bool(environ.get("IS_VERIFY"), False)
-POST_SHORTLINK = str_to_bool(environ.get("POST_SHORTLINK"), False)
-SEND_POST = str_to_bool(environ.get("SEND_POST"), False)
+POST_SHORTLINK = str_to_bool(environ.get("POST_SHORTLINK"), True)
+SEND_POST = str_to_bool(environ.get("SEND_POST"), True)
 PROTECT_CONTENT = str_to_bool(environ.get("PROTECT_CONTENT"), True)
 
 # =========================================================
 # 🔢 LIMITS
 # =========================================================
-DAILY_LIMIT = int(environ.get("DAILY_LIMIT", "5"))
+DAILY_LIMIT = int(environ.get("DAILY_LIMIT", "2"))
 VERIFICATION_DAILY_LIMIT = int(environ.get("VERIFICATION_DAILY_LIMIT", "20"))
 PREMIUM_DAILY_LIMIT = int(environ.get("PREMIUM_DAILY_LIMIT", "50"))
 
 # =========================================================
 # 🔗 SHORTLINK & VERIFICATION
 # =========================================================
-SHORTLINK_URL = environ.get("SHORTLINK_URL", "")
-SHORTLINK_API = environ.get("SHORTLINK_API", "")
-POST_SHORTLINK_URL = environ.get("POST_SHORTLINK_URL", "")
-POST_SHORTLINK_API = environ.get("POST_SHORTLINK_API", "")
-VERIFY_EXPIRE = int(environ.get("VERIFY_EXPIRE", "3600"))
-TUTORIAL_LINK = environ.get("TUTORIAL_LINK", "")
+SHORTLINK_URL = environ.get("SHORTLINK_URL", "arolinks.com")
+SHORTLINK_API = environ.get("SHORTLINK_API", "45b6928d65d1c1dfc2d52d052d879b9b02dd7fe3")
+POST_SHORTLINK_URL = environ.get("POST_SHORTLINK_URL", "arolinks.com")
+POST_SHORTLINK_API = environ.get("POST_SHORTLINK_API", "45b6928d65d1c1dfc2d52d052d879b9b02dd7fe3")
+VERIFY_EXPIRE = int(environ.get("VERIFY_EXPIRE", "180"))
+TUTORIAL_LINK = environ.get("TUTORIAL_LINK", "https://t.me/Brand_moviess/6")
 
 # =========================================================
 # 💳 PAYMENT SETTINGS
 # =========================================================
-UPI_ID = environ.get("UPI_ID", "")
-QR_CODE_IMAGE = environ.get("QR_CODE_IMAGE", "")
+UPI_ID = environ.get("UPI_ID", "kushalhari@slc")
+QR_CODE_IMAGE = environ.get("QR_CODE_IMAGE", "https://i.ibb.co/21ZPjBNw/071d44198b51.jpg")
 
 # =========================================================
 # 🖼️ IMAGES
