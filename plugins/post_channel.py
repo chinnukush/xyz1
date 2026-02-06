@@ -55,13 +55,9 @@ async def index_normal_videos(client, m: Message):
             shortlink = link
 
         caption = (
-            f"<b>{file_name}</b>\n\n"
-            f"<i>Click the button below to watch the video.</i>"
+            f"<i>ʜᴇʀᴇ ɪꜱ ʏᴏᴜʀ ʟɪɴᴋ ʙᴀʙᴇ 😘./n/n</i>"
+            f"{shortlink}"
         )
-
-        btn = InlineKeyboardMarkup([
-            [InlineKeyboardButton("📂 ɢᴇᴛ ᴠɪᴅᴇᴏ 📂", url=shortlink)]
-        ])
 
         # -----------------------
         # THUMBNAIL SYSTEM (FIXED)
