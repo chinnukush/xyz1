@@ -72,6 +72,33 @@ async def index_files(bot, query):
         if user_id in INDEX_CACHE:
             del INDEX_CACHE[user_id]
 
+@Client.on_callback_query(filters.regex(r"^index#yes$"))
+async def index_yes(bot, query):
+    user_id = query.from_user.id
+
+    # Check if cache exists
+    if user_id not in INDEX_CACHE:
+        await query.answer("⚠️ Session Expired. Please use /index again.", show_alert=True)
+        return await query.message.delete()
+
+    # Fetch cached data
+    data = INDEX_CACHE[user_id]
+    chat = data["chat"]
+    lst_msg_id = data["lst_msg_id"]
+    skip = data["skip"]
+
+    # Response to user
+    await query.message.edit(
+        f"<b>🚀 Indexing started for chat {chat}</b>\n"
+        f"Last message ID: <code>{lst_msg_id}</code>\n"
+        f"Skip: <code>{skip}</code>"
+    )
+
+    # Start indexing directly into your main DB
+    await index_files_to_db(lst_msg_id, chat, query.message, bot, skip, target_db="main")
+
+    # Cleanup cache
+    INDEX_CACHE.pop(user_id, None)
 # =================================================
 # 📥 COMMAND HANDLER (/index)
 # =================================================
