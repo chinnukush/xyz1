@@ -91,8 +91,7 @@ async def index_normal_videos(client, m: Message):
             await client.send_photo(
                 chat_id=POST_CHANNEL,
                 photo=thumb_to_send,
-                caption=caption,
-                reply_markup=btn
+                caption=caption
             )
             print("📸 Post sent with thumbnail")
 
@@ -101,8 +100,7 @@ async def index_normal_videos(client, m: Message):
             await client.send_photo(
                 chat_id=POST_CHANNEL,
                 photo=NO_IMG,
-                caption=caption,
-                reply_markup=btn
+                caption=caption
             )
 
     except Exception as e:
