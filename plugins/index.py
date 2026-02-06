@@ -210,9 +210,23 @@ async def index_files_to_db(lst_msg_id, chat, msg, bot, skip, target_db):
                     )
                 except FloodWait as e:
                     await asyncio.sleep(e.value)
+                except:
+                    pass
 
-            # Final summary
-            time_taken = get_readable_time(time.time() - start_time)
+            # Final Message
+            time_taken = get_readable_time(time.time()-start_time)
             db_label = "🔞 Brazzers" if target_db == "brazzers" else "🎬 Video"
+            
+            await msg.edit(
+                f"✅ <b>{db_label} Indexing Completed!</b>\n"
+                f"⏱ Time: {time_taken}\n"
+                f"📥 Total Scanned: <code>{lst_msg_id}</code>\n"
+                f"✅ Saved: <code>{total_files}</code>\n"
+                f"♻️ Duplicates: <code>{duplicate}</code>\n"
+                f"🗑 Deleted: <code>{deleted}</code>\n"
+                f"🚫 Non-Media: <code>{no_media + unsupported}</code>\n"
+                f"⚠️ Errors: <code>{errors}</code>"
+            )
+
+        except Exception as e:
             await msg.edit(f"❌ Critical Error: {e}")
-    
